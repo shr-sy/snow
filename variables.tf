@@ -13,18 +13,9 @@ variable "snowflake_role" {
   type        = string
 }
 
-variable "snowflake_private_key_path" {
-  description = "Path to the private key file for authentication"
+variable "snowflake_private_password" {
+  description = "Passowrd"
   type        = string
 }
 
-variable "snowflake_private_key_passphrase" {
-  description = "Passphrase for the private key"
-  type        = string
-  sensitive   = true
-}
 
-variable "snowflake_region" {
-  description = "Snowflake region (e.g., us-west-2)"
-  type        = string
-}
