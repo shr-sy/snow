@@ -13,7 +13,7 @@ variable "snowflake_role" {
   type        = string
 }
 
-variable "snowflake_private_password" {
+variable "snowflake_password" {
   description = "Passowrd"
   type        = string
 }
