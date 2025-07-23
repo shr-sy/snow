@@ -1,19 +1,19 @@
 variable "snowflake_account" {
-  description = "Snowflake account identifier (e.g., KIB31224)"
-  type        = string
+  type    = string
+  default = "KIB31224"
 }
 
 variable "snowflake_username" {
-  description = "Snowflake user"
-  type        = string
+  type    = string
+  default = "SHR1234"
 }
 
 variable "snowflake_password" {
-  description = "Snowflake password"
-  type        = string
+  type    = string
+  default = "ASDWqwer1234@!"   
 }
 
 variable "snowflake_role" {
-  description = "Snowflake role (e.g., ACCOUNTADMIN)"
-  type        = string
+  type    = string
+  default = "ORGADMIN"
 }
