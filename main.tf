@@ -2,7 +2,7 @@ provider "snowflake" {
   account         = var.snowflake_account
   username        = var.snowflake_username
   role            = var.snowflake_role
-  passowrd        = var.snowflake_passowrd
+  password        = var.snowflake_password
 }
 
 resource "snowflake_grant_ownership" "role_transfer" {
