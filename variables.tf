@@ -1,21 +1,19 @@
 variable "snowflake_account" {
-  description = "Snowflake account identifier"
+  description = "Snowflake account identifier (e.g., KIB31224)"
   type        = string
 }
 
 variable "snowflake_username" {
-  description = "Snowflake user with sufficient privileges"
-  type        = string
-}
-
-variable "snowflake_role" {
-  description = "Role used to perform actions (e.g., ACCOUNTADMIN)"
+  description = "Snowflake user"
   type        = string
 }
 
 variable "snowflake_password" {
-  description = "Passowrd"
+  description = "Snowflake password"
   type        = string
 }
 
-
+variable "snowflake_role" {
+  description = "Snowflake role (e.g., ACCOUNTADMIN)"
+  type        = string
+}
