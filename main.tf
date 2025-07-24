@@ -1,7 +1,7 @@
 terraform {
   required_providers {
     snowflake = {
-      source  = "snowflake-Labs/snowflake"
+      source  = "Snowflake-Labs/snowflake"
       version = "~> 0.73.0"
     }
   }
@@ -9,15 +9,10 @@ terraform {
 
 provider "snowflake" {}
 
-resource "snowflake_grant_ownership" "role_transfer" {
-  on {
-    object_type = "ROLE"
-    object_name = "HCP_USER"
-  }
+data "external" "transfer" {
+  program = ["python3", "${path.module}/grant_ownership.py"]
+}
 
-  to {
-    role_name = "SYSADMIN"
-  }
-
-  current_grants = true
+output "ownership_transfer_status" {
+  value = data.external.transfer.result
 }
